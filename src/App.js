@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { getUserNameList } from './samples/sample1';
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
         >
           Learn React
         </a>
+        <ul>
+          {getUserNameList().map((userName, index) => (
+            <li key={index}>{userName}</li>
+          ))}
+        </ul>
       </header>
     </div>
   );
